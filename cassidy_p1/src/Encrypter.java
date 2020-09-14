@@ -33,9 +33,4 @@ public class Encrypter {
 
          return newString;
     }
-
-    public static void main(String[] args) {
-         Encrypter myEncrypter = new Encrypter();
-         System.out.println(myEncrypter.encrypt("1234"));
-    }
 }

@@ -38,9 +38,4 @@ public class Decrypter {
 
          return newString;
     }
-
-    public static void main(String[] args) {
-         Decrypter myDecrypter = new Decrypter();
-         System.out.println(myDecrypter.decrypt("0189"));
-    }
 }
