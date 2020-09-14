@@ -1,6 +1,41 @@
 public class Encrypter {
-    // 1. Replace each digit with the result of adding 7 to the digit and getting the remainder
-    //  after dividing the new value by 10.
-    // 2. Swap the first digit with the third, and swap the second digit with the fourth.
-    // 3. Return the encrypted integer as a String.
+
+    // Replaces each digit with the result of adding 7 and modulus by 10
+    public static String encryptDigits(String digits) {
+         int num;
+         String newString = "";
+
+         for (int i = 0; i < 4; i++) {
+              num = digits.charAt(i) - 48;
+              num = (num + 7) % 10;
+              newString = newString + num;
+         }
+
+         return newString;
+    }
+
+    // Swaps the first digit with third, and second digit with fourth
+    public static String swapDigits(String digits) {
+         String newString = "";
+         newString = newString + digits.charAt(2);
+         newString = newString + digits.charAt(3);
+         newString = newString + digits.charAt(0);
+         newString = newString + digits.charAt(1);
+
+         return newString;
+    }
+
+    // Encrypts four digit string of numbers using encryptDigits() and swapDigits()
+    public String encrypt(String numToEncrypt) {
+         String newString;
+         newString = encryptDigits(numToEncrypt);
+         newString = swapDigits(newString);
+
+         return newString;
+    }
+
+    public static void main(String[] args) {
+         Encrypter myEncrypter = new Encrypter();
+         System.out.println(myEncrypter.encrypt("1234"));
+    }
 }
