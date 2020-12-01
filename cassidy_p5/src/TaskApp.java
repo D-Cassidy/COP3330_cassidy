@@ -5,7 +5,7 @@ import java.util.Formatter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class App {
+public class TaskApp {
     private static final Scanner scnr = new Scanner(System.in);
 
     public static void main(String[] args) {
