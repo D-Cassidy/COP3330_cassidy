@@ -8,7 +8,8 @@ import java.util.Scanner;
 public class TaskApp {
     private static final Scanner scnr = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    // MENU FUNCTIONS
+    public static void taskAppMainMenu() {
         while(true) {
             displayMainMenuText();
 
@@ -31,8 +32,6 @@ public class TaskApp {
             }
         }
     }
-
-    // MAIN MENU OPTIONS
     private static void listOperationMenu(TaskList list) {
         while(true) {
             displayListOperationMenuText();
@@ -63,6 +62,7 @@ public class TaskApp {
             }
         }
     }
+
     private static TaskList loadExistingList() {
         String filename;
         scnr.nextLine();

@@ -1,6 +1,3 @@
-import java.time.DateTimeException;
-import java.time.LocalDate;
-
 public class ContactItem {
     String firstName;
     String lastName;
